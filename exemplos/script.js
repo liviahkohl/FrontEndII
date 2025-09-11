@@ -31,13 +31,14 @@ input.addEventListener('change', () => {
 
 console.log(lista)
 
-lista.forEach( (elemento) => {
-    console.log(ev.target.parentElement)
-    elemento.addEventListener('click', (ev) =>{
-        if (elemento in lista_esquerda) {
-            prodAdd.appendChild(elemento)
-        } else {
-            lista_esquerda.appendChild
+lista.forEach((elemento) => {
+    elemento.addEventListener('click', (ev) => {
+        const li = ev.target;
+        const ul = li.parentElement;
+
+        if (ul === lista_esquerda) {
+            prodAdd.appendChild(li);
+        } else{
+            lista_esquerda.appendChild(li)
         }
-    })
-})
+    })})
