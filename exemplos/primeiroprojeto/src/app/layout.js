@@ -15,6 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="pt-br">
       <body>
         <Header> </Header>
+        {children}
       </body>
     </html>
   );
