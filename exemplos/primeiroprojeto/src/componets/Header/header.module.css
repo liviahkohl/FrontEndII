@@ -1,5 +1,5 @@
 .header{
-    height: 100px;
+    height: 80px;
     background-color: #e0d2d2;
     padding: 10px;
 }
@@ -7,18 +7,18 @@
 .ulMenu{
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     font-size: 22px;
 }
 
 .ulSubMenu {
     font-size: 18px;
     padding-left: 10px;
-    max-width: 0;
+    max-height: 0;
     overflow: hidden;
 }
 
-.liMenu>.ulSubMenu:hover {
+.liMenu:hover .ulSubMenu {
     max-height: 100vh;
 }
 
@@ -27,5 +27,5 @@
 }
 
 .link:hover {
-    color: black;
+    color: rgb(0, 0, 0);
 }

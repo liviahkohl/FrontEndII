@@ -1,10 +1,23 @@
+'use client'
+import { useState } from 'react';
 import styles from './header.module.css';
 import Link from 'next/link'
 
 
 export default function Header() {
+    const [show, setShow] = useState(false);
     return (
         <>
+        <header>
+            <button onClick={() => {setShow(!show)}}>xxxxxx</button>
+        {show &&
+
+        (<div style={{height: '100px', border:'2px solid black'}}>
+            <p>Mobile</p>
+        </div>)
+        }       
+
+        </header>
             <header className={styles.header}>
                 <nav>
                     <ul className={styles.ulMenu}>
@@ -15,7 +28,7 @@ export default function Header() {
                                 <li className={styles.liSubMenu}><Link className={styles.link} href='/produto'>Pesquisar</Link></li>
                             </ul>   
                         </li>
-                                                    
+                                                
                     </ul>
                 </nav>
             </header>

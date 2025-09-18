@@ -9,3 +9,15 @@
 .h1 {
   color: blue;
 }
+
+.button{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  margin-left: 2px;
+  background-color: brown;
+  border-color: brown;
+  border-radius: 5px;
+  padding: 3px;
+  color: rgba(253, 253, 253, 0.808);
+}
