@@ -1,5 +1,4 @@
 //import Image from "next/image";
-
 'use client'
 import { useState } from "react";
 import styles from "./page.module.css";
@@ -7,6 +6,7 @@ import styles from "./page.module.css";
 export default function Home() {
   //let cont = 0;
   const [cont, setCont] = useState(0)
+  const [estilo, setEstilo] = useState('')
 
   const Subtrair = () => {
     setCont(cont-1);
@@ -25,6 +25,11 @@ export default function Home() {
       <button className={styles.button} onClick={() => {Adicionar()}}>Adicionar</button>
       <button className={styles.button} onClick={() => {Subtrair()}}>Subtrair</button>
       <p>Contagem: {cont}</p>
+
+      <button className={styles.button} onClick={() => {setEstilo('colorido')}}>Estilo Colorido</button>
+      <button className={styles.button} onClick={() => {setEstilo('cinza')}}>Estilo Cinza</button>
+
+      <div className={`${styles.box} ${estilo ==='colorido'? styles.colorido : estilo === 'cinza' ? styles.cinza : ''}`}></div>
     </div>
   );
 }
