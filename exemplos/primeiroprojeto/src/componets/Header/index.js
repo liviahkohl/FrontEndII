@@ -13,13 +13,13 @@ export default function Header() {
             <button onClick={() => {setShow(!show)}}>xxxxxx</button>
         {show &&
 
-        (<div style={{height: '100px', border:'2px solid black'}}>
+        <div style={{height: '100px', border:'2px solid black'}}>
            {/*<p>Mobile</p>*/}
            <Image src={'/images/olho.jpg'} height={50} width={50} alt='Imagem'></Image>
            <nav>
 
            </nav>
-        </div>)
+        </div>
         }       
 
         </header>
