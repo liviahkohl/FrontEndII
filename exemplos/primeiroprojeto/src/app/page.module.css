@@ -1,37 +1,85 @@
-.divpai{
-  background-color: rgb(212, 125, 125);
+.container {
+  min-height: 100vh;
+  background-color: #000;
+  color: #fff;
 }
 
-.paragrafo{
-  color: aliceblue;
-  font-family: 'Courier New', Courier, monospace;
-}
-.h1 {
-  color: blue;
+.main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem;
 }
 
-.button{
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-right: 5px;
-  margin-left: 2px;
-  background-color: brown;
-  border-color: brown;
-  border-radius: 5px;
-  padding: 3px;
-  color: rgba(253, 253, 253, 0.808);
+.card {
+  background-color: #111;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
 }
 
-.box{
-  width: 300px;
-  height: 300px;
-  border: 2px solid black;
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
-.colorido {
-  background-color: brown;
+.subtitle {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
-.cinza {
-  background-color: gray;
+.paragraph {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.buttonGroup {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.buttonBlue {
+  background-color: #000;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
+.buttonBlue:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.buttonGreen {
+  background-color: #111;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
+.buttonGreen:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.timelineSection {
+  margin-top: 1.5rem;
+}
+
+.timeline {
+  list-style: none;
+  background-color: #111;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.timeline li {
+  margin-bottom: 0.5rem;
 }

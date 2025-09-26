@@ -2,34 +2,44 @@
 'use client'
 import { useState } from "react";
 import styles from "./page.module.css";
+import Header from "@/componets/Header"
 
-export default function Home() {
-  //let cont = 0;
-  const [cont, setCont] = useState(0)
-  const [estilo, setEstilo] = useState('')
 
-  const Subtrair = () => {
-    setCont(cont-1);
-    console.log(cont);
-  }
 
-  const Adicionar = () => {
-    setCont(cont+1);
-    console.log(cont);
-  }
-
+export default function Biografia() {
   return (
-    <div className={styles.divpai}>
-      <h1>Home!</h1>
-      <p className={styles.paragrafo}>Paragrafo</p>
-      <button className={styles.button} onClick={() => {Adicionar()}}>Adicionar</button>
-      <button className={styles.button} onClick={() => {Subtrair()}}>Subtrair</button>
-      <p>Contagem: {cont}</p>
+    <div className={styles.container}>
+      <main className={styles.main}>
+        <section className={styles.card}>
+          <h2 className={styles.title}>Biografia — Gilberto Gil</h2>
+          <p className={styles.paragraph}>
+            Gilberto Gil (nascido em 26 de junho de 1942 em Salvador, BA) é cantor,
+            compositor e multi-instrumentista. Figura central do movimento Tropicalista,
+            Gil construiu uma carreira que mescla MPB, influências africanas, reggae,
+            rock e pop. Foi Ministro da Cultura do Brasil entre 2003 e 2008.
+          </p>
+          <p className={styles.paragraph}>
+            Esta página traz um resumo e links para duas obras em destaque: <strong>Refavela</strong>
+            (1977) e <strong>Luar (A Gente Precisa Ver o Luar)</strong> (1981).
+          </p>
+          <div className={styles.buttonGroup}>
+            <a href="/luar" className={styles.buttonBlue}>Ver Luar</a>
+            <a href="/refavela" className={styles.buttonGreen}>Ver Refavela</a>
+          </div>
+        </section>
 
-      <button className={styles.button} onClick={() => {setEstilo('colorido')}}>Estilo Colorido</button>
-      <button className={styles.button} onClick={() => {setEstilo('cinza')}}>Estilo Cinza</button>
-
-      <div className={`${styles.box} ${estilo ==='colorido'? styles.colorido : estilo === 'cinza' ? styles.cinza : ''}`}></div>
+        <section className={styles.timelineSection}>
+          <h3 className={styles.subtitle}>Linha do tempo resumida</h3>
+          <ul className={styles.timeline}>
+            <li><strong>1942</strong> — Nascimento em Salvador (BA).</li>
+            <li><strong>1967–68</strong> — Participação no Tropicalismo.</li>
+            <li><strong>1970s</strong> — Exílio e influência africana.</li>
+            <li><strong>1977</strong> — Lançamento de <em>Refavela</em>.</li>
+            <li><strong>1981</strong> — Lançamento de <em>Luar (A Gente Precisa Ver o Luar)</em>.</li>
+            <li><strong>2003–2008</strong> — Min. da Cultura.</li>
+          </ul>
+        </section>
+      </main>
     </div>
   );
 }
