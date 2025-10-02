@@ -1,137 +1,177 @@
 .header, .headerMobile {
-  background-color: #000;
+  background-color: #0F0326;
   color: #fff;
   width: 100%;
-  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
-  }
-  
-  
-  .link {
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo desktop */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-right: 4rem;
+  white-space: nowrap;
+}
+
+.link {
   color: #fff;
   text-decoration: none;
   transition: color 0.3s ease;
-  }
-  
-  
-  .link:hover {
-  color: #bbb;
-  }
-  
-  
-  .header nav {
-  display: flex;
-  justify-content: center;
-  padding: 1rem 0;
-  }
-  
-  
-  .ulMenu {
+}
+
+.link:hover {
+  color: #8C1C13;
+}
+
+/* Menu desktop */
+.ulMenu {
   display: flex;
   list-style: none;
   gap: 2rem;
   margin: 0;
   padding: 0;
-  }
-  
-  
-  .liMenu {
+  flex-wrap: wrap;
+}
+
+.liMenu {
   position: relative;
-  }
-  
-  
-  .ulSubMenu {
+}
+
+.ulSubMenu {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #000;
+  background-color: #0F0326;
   list-style: none;
   padding: 0.5rem 0;
   margin: 0;
   border: 1px solid #fff;
-  }
-  
-  
-  .liMenu:hover .ulSubMenu {
+}
+
+.liMenu:hover .ulSubMenu {
   display: block;
-  }
-  
-  
-  .liSubMenu {
+}
+
+.liSubMenu {
   padding: 0.5rem 1rem;
   white-space: nowrap;
-  }
-  
-  
-  .liSubMenu:hover {
+}
+
+.liSubMenu:hover {
   background-color: #111;
-  }
-  
-  
-  .headerMobile {
+}
+
+/* ---------------- MOBILE ---------------- */
+.headerMobile {
   display: none;
-  padding: 1rem;
-  }
-  
-  
-  .mobileButton {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 28px;
-    height: 20px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-  }
+  background-color: #0F0326;
+  color: #fff;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
 
-  .mobileButton span {
-    display: block;
-    height: 3px;
-    width: 100%;
-    background: #fff;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-  }
+.mobileButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 20; /* garante que fique acima */
+}
 
-  .mobileButton.open span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-  .mobileButton.open span:nth-child(2) {
-    opacity: 0;
-  }
-  .mobileButton.open span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
-  }
-  
-  .mobileButton:hover {
-  background-color: #111;
-  }
-  
-  
-  .mobileMenu {
-  margin-top: 1rem;
+.mobileButton span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* animação botão hamburguer */
+.mobileButton.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.mobileButton.open span:nth-child(2) {
+  opacity: 0;
+}
+.mobileButton.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Logo mobile centralizado */
+.logoMobile {
+  flex: 1;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Menu mobile */
+.mobileMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #0F0326;
   border-top: 1px solid #fff;
-  padding-top: 1rem;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
   }
-  
-  
-  .ulMenuMobile {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ulMenuMobile {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  }
-  
-  @media (max-width: 768px) {
-    .header { display: none; }
-    .headerMobile { display: flex; }
-  }
-  
-  @media (min-width: 769px) {
-    .headerMobile { display: none; }
-    .header { display: flex; }
-  }
+}
+
+.ulMenuMobile li {
+  font-size: 1.1rem;
+}
+
+.ulMenuMobile li .link {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.ulMenuMobile li .link:hover {
+  color: #8C1C13;
+}
+
+/* ---------------- RESPONSIVIDADE ---------------- */
+@media (max-width: 768px) {
+  .header { display: none; }
+  .headerMobile { display: flex; }
+}

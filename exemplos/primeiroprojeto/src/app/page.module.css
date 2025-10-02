@@ -1,7 +1,7 @@
 .container {
   min-height: 100vh;
-  background-color: #000;
-  color: #fff;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .main {
@@ -11,22 +11,34 @@
 }
 
 .card {
-  background-color: #111;
+  background-color: #8C1C13;
   border-radius: 1rem;
   padding: 1.5rem;
-  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.bioImage {
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  object-fit: cover;
 }
 
 .title {
   font-size: 2rem;
-  font-weight: bold;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .subtitle {
   font-size: 1.4rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .paragraph {
@@ -41,7 +53,7 @@
 }
 
 .buttonBlue {
-  background-color: #000;
+  background-color: #0F0326;
   border: 1px solid #fff;
   color: #fff;
   padding: 0.5rem 1rem;
@@ -51,7 +63,7 @@
 
 .buttonBlue:hover {
   background-color: #fff;
-  color: #000;
+  color: #0F0326;
 }
 
 .buttonGreen {
@@ -69,17 +81,74 @@
 }
 
 .timelineSection {
-  margin-top: 1.5rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
 }
 
 .timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   list-style: none;
-  background-color: #111;
-  border-radius: 1rem;
-  padding: 1rem;
-  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  max-width: 1000px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: #0F0326;
+  transform: translateY(-50%);
+  border-radius: 2px;
+  z-index: 0;
 }
 
 .timeline li {
-  margin-bottom: 0.5rem;
+  position: relative;
+  flex: 1;
+  text-align: center;
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  background: #8C1C13;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+
+.timeline li strong {
+  display: block;
+  margin-bottom: 2.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #0F0326;
+}
+
+
+.timeline li em {
+  display: block;
+  margin-top: 2.5rem;
+  color: #8C1C13;
+  font-style: italic;
+  font-size: 0.9rem;
 }
