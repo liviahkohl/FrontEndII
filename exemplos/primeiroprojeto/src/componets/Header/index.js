@@ -33,7 +33,6 @@ export default function Header() {
           </div>
         )}
       </header>
-      {/* Header Desktop */}
       <header className={styles.header}>
         <div className={styles.logo}>Gilberto Gil</div>
         <nav>

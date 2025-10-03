@@ -1,20 +1,121 @@
-.refavela-container h1 {
-    font-size: 2.5rem;
-}
-
-.refavela-container h2 {
-    font-size: 1.8rem;
-}
-
-.refavela-container p {
-    line-height: 1.6;
-}
-
-.refavela-container .album-card {
-    background-color: #aa7878;
-    color: #ffffff;
-    border-radius: 1rem;
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+.container {
+    min-height: 100vh;
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  .main {
+    max-width: 900px;
+    margin: 0 auto;
     padding: 1.5rem;
+  }
+  
+  .card {
+    background-color: #0F0326; 
+    border-radius: 1rem;
+    padding: 1.5rem;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .title {
+    font-size: 2rem;
     margin-bottom: 1.5rem;
-}
+    text-align: center;
+  }
+  
+  .subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  
+  .paragraph {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .albumWrapper {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0;
+  }
+  
+  .albumImage {
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    object-fit: cover;
+    width: 280px;
+    height: 280px;
+  }
+  
+  .tracksGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .trackCard {
+    background-color: #8C1C13;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    width: 200px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease-in-out, background 0.2s;
+  }
+  
+  .trackCard:hover {
+    transform: scale(1.05);
+    background-color: #282828;
+  }
+  
+  .trackImage {
+    width: 100%;
+    height: 150px;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    margin-bottom: 0.75rem;
+  }
+  
+  .trackTitle {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+  }
+  
+  .trackLink {
+    display: inline-block;
+    margin-top: 0.25rem;
+    color: #1DB954; 
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+  
+  .trackLink:hover {
+    text-decoration: underline;
+  }
+  
+
+  .buttonGroup {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .buttonBack {
+    background-color: #8C1C13;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+  }
+  
+  .buttonBack:hover {
+    background-color: #fff;
+    color: #8C1C13;
+  }
+  

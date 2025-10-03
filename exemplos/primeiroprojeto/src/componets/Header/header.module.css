@@ -9,7 +9,6 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* Logo desktop */
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
@@ -28,7 +27,6 @@
   color: #8C1C13;
 }
 
-/* Menu desktop */
 .ulMenu {
   display: flex;
   list-style: none;
@@ -67,7 +65,6 @@
   background-color: #111;
 }
 
-/* ---------------- MOBILE ---------------- */
 .headerMobile {
   display: none;
   background-color: #0F0326;
@@ -88,7 +85,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 20; /* garante que fique acima */
+  z-index: 20; 
 }
 
 .mobileButton span {
@@ -100,7 +97,6 @@
   transition: all 0.3s ease;
 }
 
-/* animação botão hamburguer */
 .mobileButton.open span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -111,7 +107,6 @@
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Logo mobile centralizado */
 .logoMobile {
   flex: 1;
   text-align: center;
@@ -170,7 +165,6 @@
   color: #8C1C13;
 }
 
-/* ---------------- RESPONSIVIDADE ---------------- */
 @media (max-width: 768px) {
   .header { display: none; }
   .headerMobile { display: flex; }

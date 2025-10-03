@@ -1,0 +1,33 @@
+.footer {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 40px;
+  }
+  
+  .content p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  .autor {
+    color: #8C1C13; 
+    font-weight: bold;
+  }
+  
+  .social {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .social img {
+    filter: brightness(0) invert(1); 
+    transition: transform 0.3s ease;
+  }
+  
+  .social img:hover {
+    transform: scale(1.2);
+  }

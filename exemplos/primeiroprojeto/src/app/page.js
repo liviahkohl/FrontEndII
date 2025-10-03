@@ -10,8 +10,6 @@ export default function Biografia() {
       <main className={styles.main}>
         <section className={styles.card}>
           <h2 className={styles.title}>Biografia — Gilberto Gil</h2>
-
-          {/* Imagem usando next/image */}
           <div className={styles.imageWrapper}>
             <Image
               src="/images/gilberto-gil.webp"
