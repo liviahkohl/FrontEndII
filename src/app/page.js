@@ -12,7 +12,7 @@ export default function Biografia() {
           <h2 className={styles.title}>Biografia — Gilberto Gil</h2>
           <div className={styles.imageWrapper}>
             <Image
-              src="public/images/gilberto-gil.webp"
+              src="/images/gilberto-gil.webp"
               alt="Gilberto Gil"
               width={250}
               height={400}
