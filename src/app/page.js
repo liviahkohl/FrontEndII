@@ -1,7 +1,7 @@
 'use client'
 import { useState } from "react";
 import styles from "./page.module.css";
-import Header from "@/componets/Header"
+import Header from "@/components/Header"
 import Image from "next/image";
 
 export default function Biografia() {
